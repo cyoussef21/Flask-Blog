@@ -11,13 +11,10 @@ from typing import List
 from functools import wraps
 # Other modules
 import os
-from dotenv import load_dotenv
 from datetime import date
 from werkzeug.security import generate_password_hash, check_password_hash
 # Import forms from the forms.py
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
-
-load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('FLASK_KEY')
